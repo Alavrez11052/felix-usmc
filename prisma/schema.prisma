@@ -1,0 +1,128 @@
+// Felix's United States Marine Corps — website schema
+// Content is database-backed and editable from /admin. Admin access is by
+// email + password only (roles OWNER / ADMIN). No Roblox integration.
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  OWNER
+  ADMIN
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         Role     @default(ADMIN)
+  createdAt    DateTime @default(now())
+}
+
+model AdminInvite {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  token     String    @unique
+  createdAt DateTime  @default(now())
+  claimedAt DateTime?
+}
+
+model SiteConfig {
+  id            Int     @id @default(1)
+  discordUrl    String  @default("")
+  robloxGroupUrl String @default("")
+  xUrl          String  @default("")
+  bannerText    String?
+}
+
+model Command {
+  id          String         @id @default(cuid())
+  slug        String         @unique
+  name        String
+  abbr        String
+  tagline     String         @default("")
+  description String         @db.Text
+  discordUrl  String?
+  image       String         @default("")
+  sortOrder   Int            @default(0)
+  units       Unit[]
+  staff       CommandStaff[]
+}
+
+model Unit {
+  id          String  @id @default(cuid())
+  commandId   String
+  command     Command @relation(fields: [commandId], references: [id], onDelete: Cascade)
+  name        String
+  description String  @default("") @db.Text
+  discordNote String  @default("WIP")
+  sortOrder   Int     @default(0)
+}
+
+model CommandStaff {
+  id        String  @id @default(cuid())
+  commandId String
+  command   Command @relation(fields: [commandId], references: [id], onDelete: Cascade)
+  roleTitle String
+  rankLabel String  @default("")
+  name      String
+  sortOrder Int     @default(0)
+}
+
+model Leadership {
+  id        String @id @default(cuid())
+  abbr      String
+  title     String
+  rankTitle String @default("")
+  name      String
+  sortOrder Int    @default(0)
+}
+
+model RankCategory {
+  id        String @id @default(cuid())
+  name      String
+  code      String @default("")
+  sortOrder Int    @default(0)
+  ranks     Rank[]
+}
+
+model Rank {
+  id         String       @id @default(cuid())
+  categoryId String
+  category   RankCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  code       String
+  name       String
+  sortOrder  Int          @default(0)
+}
+
+model Announcement {
+  id        String   @id @default(cuid())
+  title     String
+  body      String   @db.Text
+  featured  Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Affiliate {
+  id          String @id @default(cuid())
+  name        String
+  url         String @default("")
+  description String @default("") @db.Text
+  sortOrder   Int    @default(0)
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  userEmail String   @default("")
+  action    String
+  details   String   @default("")
+  createdAt DateTime @default(now())
+}
