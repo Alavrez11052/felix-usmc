@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-paper text-ink font-sans antialiased; }
+
+.h-display { @apply font-display uppercase tracking-wide; font-weight: 800; }
+
+.btn-black { @apply inline-block bg-ink text-paper font-display font-bold uppercase tracking-widest text-sm px-6 py-3 border-2 border-ink hover:bg-paper hover:text-ink transition-colors; }
+.btn-white { @apply inline-block bg-paper text-ink font-display font-bold uppercase tracking-widest text-sm px-6 py-3 border-2 border-paper hover:bg-transparent hover:text-paper transition-colors; }
+.btn-outline-w { @apply inline-block bg-transparent text-paper font-display font-bold uppercase tracking-widest text-sm px-6 py-3 border-2 border-paper hover:bg-paper hover:text-ink transition-colors; }
+.btn-outline-b { @apply inline-block bg-transparent text-ink font-display font-bold uppercase tracking-widest text-sm px-6 py-3 border-2 border-ink hover:bg-ink hover:text-paper transition-colors; }
+
+.field { @apply w-full border border-neutral-400 bg-white px-3 py-2 text-sm text-ink focus:outline-none focus:border-ink; }
+.label { @apply block text-xs font-display font-bold uppercase tracking-widest text-neutral-600 mb-1; }
+.card { @apply border border-neutral-300 bg-white; }
+.admin-card { @apply border border-neutral-300 bg-white p-5; }
+.tbl-input { @apply border border-neutral-300 bg-white px-2 py-1 text-sm w-full; }
