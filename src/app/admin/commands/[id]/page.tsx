@@ -1,10 +1,14 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { getCurrentUser } from "@/lib/auth";
+import { hasPermission } from "@/lib/permissions";
 import { db } from "@/lib/db";
 import { addStaff, addUnit, deleteStaff, deleteUnit, updateCommand, updateStaff, updateUnit } from "@/lib/actions";
 
 export const metadata = { title: "Admin — Edit Command" };
 
 export default async function EditCommand({ params }: { params: { id: string } }) {
+  const me = await getCurrentUser();
+  if (!me || !hasPermission(me, "commands")) redirect("/admin");
   const cmd = await db.command.findUnique({
     where: { id: params.id },
     include: { units: { orderBy: { sortOrder: "asc" } }, staff: { orderBy: { sortOrder: "asc" } } },
