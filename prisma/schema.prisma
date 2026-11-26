@@ -23,6 +23,7 @@ model User {
   passwordHash String
   name         String
   role         Role     @default(ADMIN)
+  permissions  String[] @default([])
   createdAt    DateTime @default(now())
 }
 
