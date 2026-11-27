@@ -7,10 +7,10 @@ import { getAnnouncements, getCommands, getConfig, getLeadership } from "@/lib/d
 export const metadata = { title: "Felix's United States Marine Corps" };
 
 const HIGHLIGHTS = [
-  { title: "Semi-Realistic Military Simulation", text: "Structured like the real Marine Corps, played like a game. There is a chain of command and real standards, and it is still supposed to be fun." },
-  { title: "Experienced Leadership", text: "Headquarters is run by members who have done this for a long time, and every command has its own leadership team in place." },
-  { title: "Multiple Career Opportunities", text: "Six commands are recruiting, from infantry and aviation to military police, law, and special operations. Pick the job you actually want." },
-  { title: "Active Military Operations", text: "Patrols run with other members, trainings are held every week, and promotions are earned. There is always something on the schedule." },
+  { title: "Semi-Realistic Military Simulation", text: "The group is organized like the real Marine Corps, with ranks, a chain of command, and standards that get enforced. Underneath that, it is a game, and nobody here forgets it." },
+  { title: "Experienced Leadership", text: "Headquarters is staffed by members who have been running milsim groups for a long time. Every command has a Commanding Officer, a Deputy Commanding Officer, and a Senior Enlisted Advisor in place." },
+  { title: "Six Commands Recruiting", text: "Infantry and aviation in MARFORCOM, law enforcement in MCMP, special operations in MARSOC, training in TECOM, and legal and inspections work in JAD and OIGMC. After recruit training, the choice is yours." },
+  { title: "Active Military Operations", text: "Patrols and operations run with other members, and trainings are held every week. Promotions are earned through activity and performance." },
 ];
 
 export default async function Home() {
@@ -75,14 +75,16 @@ export default async function Home() {
         <div>
           <h2 className="h-display text-3xl border-l-8 border-scarlet pl-4">Who We Are</h2>
           <p className="mt-5 text-neutral-700 leading-relaxed">
-            Felix&rsquo;s U.S. Marine Corps is an imitation of the modern-day Marine Corps simulated on ROBLOX.
+            Felix&rsquo;s United States Marine Corps is a Roblox military simulation group modeled on the modern day
+            United States Marine Corps.
           </p>
           <p className="mt-3 text-neutral-700 leading-relaxed">
-            The real Marine Corps fights on land, at sea, and in the air, with its own infantry, artillery, aircraft,
-            and special operations forces. It is one of the eight uniformed services of the United States.
+            Members enlist, complete recruit training, and join one of six commands, each with its own job: infantry,
+            aviation, military police, special operations, training, or legal and inspections work. The group runs on
+            a chain of command, and rank is earned through activity and conduct.
           </p>
           <p className="mt-3 text-neutral-700 leading-relaxed">
-            Felix&rsquo;s U.S. Marine Corps was founded on November 14th, 2026.
+            The group was founded on November 14, 2026.
           </p>
           <Link href="/about" className="btn-outline-b mt-6">More About Us</Link>
         </div>
@@ -98,9 +100,9 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-4 py-16">
           <h2 className="h-display text-3xl border-l-8 border-paper pl-4">Why Join Us?</h2>
           <p className="mt-5 max-w-3xl text-paper/80 leading-relaxed">
-            We run this group on discipline, structure, and organization, and we keep it active. Members patrol
-            together, trainings run every week, and promotions go to the people who earn them. Plenty of positions
-            are still open, and Headquarters is run by experienced members.
+            Discipline and structure are not decoration here. Members patrol together, trainings run every week,
+            and promotions go to the members who put the time in. Positions are still open across all six commands,
+            and Headquarters is run by experienced members.
           </p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {HIGHLIGHTS.map((h, i) => (
@@ -137,7 +139,7 @@ export default async function Home() {
       <section className="bg-bone">
         <div className="mx-auto max-w-7xl px-4 py-16">
           <h2 className="h-display text-3xl border-l-8 border-scarlet pl-4">Our Commands</h2>
-          <p className="mt-4 text-neutral-700">Everything listed below are our commands within Felix&rsquo;s U.S. Marine Corps.</p>
+          <p className="mt-4 text-neutral-700">Six commands make up Felix&rsquo;s USMC. Each one has its own role, its own leadership, and its own Discord.</p>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {commands.map((c) => <CommandCard key={c.id} command={c} />)}
           </div>
@@ -155,11 +157,11 @@ export default async function Home() {
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center">
           <h2 className="h-display text-4xl">Ready to Enlist?</h2>
           <p className="mt-4 max-w-2xl mx-auto text-paper/85 leading-relaxed">
-            To enlist, join the Discord and the Roblox group, then finish recruit training. Earn your place among
-            the Few, the Proud, the Marines. Semper Fidelis.
+            Enlistment takes four steps. Start in the Discord and the Roblox group, finish recruit training with
+            TECOM, then choose your command. Semper Fidelis.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3 text-left">
-            {["Join the Discord", "Join the Roblox Group", "Complete Recruit Training (TECOM)"].map((s, i) => (
+            {["Join the Discord", "Join the Roblox Group", "Complete Recruit Training (TECOM)", "Choose Your Command"].map((s, i) => (
               <div key={s} className="border border-white/25 bg-black/50 rounded-lg px-4 py-3 text-sm font-display font-bold uppercase tracking-widest">
                 <span className="text-gold mr-2">Step {i + 1}</span>{s}
               </div>
