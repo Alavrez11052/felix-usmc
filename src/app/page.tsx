@@ -21,7 +21,7 @@ export default async function Home() {
   const featured = announcements.filter((a) => a.featured).slice(0, 3);
   const stats = [
     { n: commands.length, label: "Commands" },
-    { n: unitCount, label: "Units" },
+    { n: unitCount, label: "Divisions" },
     { n: leadership.length, label: "HQ Leaders" },
     { n: 20, label: "Ranks" },
   ];
