@@ -37,10 +37,10 @@ export default async function CommandPage({ params }: { params: { slug: string }
 
       <div className="mx-auto max-w-7xl px-4 py-12 grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2">
-          <h2 className="h-display text-2xl border-l-8 border-ink pl-4">Who We Are</h2>
+          <h2 className="h-display text-2xl border-l-8 border-scarlet pl-4">Who We Are</h2>
           <p className="mt-4 text-neutral-700 leading-relaxed whitespace-pre-line">{cmd.description}</p>
 
-          <h2 className="h-display text-2xl border-l-8 border-ink pl-4 mt-12">Our Units</h2>
+          <h2 className="h-display text-2xl border-l-8 border-scarlet pl-4 mt-12">Our Units</h2>
           {cmd.units.length === 0 ? (
             <p className="mt-4 text-neutral-600">No subordinate units are currently listed for this command.</p>
           ) : (
@@ -59,7 +59,7 @@ export default async function CommandPage({ params }: { params: { slug: string }
         </div>
 
         <aside>
-          <h2 className="h-display text-2xl border-l-8 border-ink pl-4">Chain of Command</h2>
+          <h2 className="h-display text-2xl border-l-8 border-scarlet pl-4">Chain of Command</h2>
           <div className="mt-5 border border-neutral-300 divide-y divide-neutral-200">
             {cmd.staff.map((s) => (
               <div key={s.id} className="p-4 bg-white">
