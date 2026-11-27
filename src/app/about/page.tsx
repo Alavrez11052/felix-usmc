@@ -10,7 +10,7 @@ export default async function About() {
     <div className="mx-auto max-w-5xl px-4 py-14">
       <h1 className="h-display text-4xl border-l-8 border-scarlet pl-4">About Us</h1>
       <div className="relative h-64 sm:h-80 border-2 border-ink mt-8">
-        <Image src="/images/marforcom-2mardiv.png" alt="2nd Marine Division — Follow Me" fill className="object-cover grayscale" />
+        <Image src="/images/marforcom-2mardiv.png" alt="2nd Marine Division, Follow Me" fill className="object-cover grayscale" />
       </div>
       <div className="mt-10 space-y-5 text-neutral-700 leading-relaxed">
         <p>Felix&rsquo;s U.S. Marine Corps is an imitation of the modern-day Marine Corps simulated on ROBLOX.</p>
@@ -23,16 +23,16 @@ export default async function About() {
       </div>
       <h2 className="h-display text-2xl mt-12 border-l-8 border-scarlet pl-4">Our Mission</h2>
       <p className="mt-4 text-neutral-700 leading-relaxed">
-        Our mission is to run a disciplined, structured, and immersive Marine Corps simulation on Roblox — training
-        civilians into Marines through TECOM, fielding the Corps&rsquo; fighting forces through MARFORCOM and MARSOC,
-        upholding order through the Military Police, and holding ourselves accountable through the Judge Advocate
-        Division and the Inspector General.
+        Our mission is simple. Train civilians into Marines, put a fighting force in the field, keep order, and
+        hold ourselves to the standard. Training and Education Command runs the training. Marine Forces Command
+        and the special operations command provide the fighting force. The Military Police keep order, and the
+        Judge Advocate Division and the Inspector General keep everyone honest.
       </p>
       <h2 className="h-display text-2xl mt-12 border-l-8 border-scarlet pl-4">Semi-Realism Philosophy</h2>
       <p className="mt-4 text-neutral-700 leading-relaxed">
-        At Felix&rsquo;s United States Marine Corps, we offer semi-realism while still keeping the fun. The group is
-        mainly MILSIM based — we value structure and discipline, and we run active patrols, weekly trainings, and
-        promotions, all in a community designed to be immersive without losing what makes it enjoyable.
+        We aim for semi-realistic. The structure, the discipline, and the chain of command are treated as real.
+        So are the patrols, the weekly trainings, and the promotions. It is still a game, though, and it is
+        supposed to be fun.
       </p>
       <h2 className="h-display text-2xl mt-12 border-l-8 border-scarlet pl-4">Organizational Structure</h2>
       <p className="mt-4 text-neutral-700 leading-relaxed">
@@ -41,9 +41,9 @@ export default async function About() {
       </p>
       <h2 className="h-display text-2xl mt-12 border-l-8 border-scarlet pl-4">Opportunities</h2>
       <p className="mt-4 text-neutral-700 leading-relaxed">
-        We have many positions still open within our divisions and our Headquarters are heavily experienced. Whether
-        you want to fight with the Raiders, fly with the 2nd Marine Aircraft Wing, enforce the UCMJ, train the next
-        generation of Marines, or argue a court-martial — there is a billet for you.
+        Plenty of positions are still open, and Headquarters is run by experienced members. You can fight with
+        the Raiders, fly with the 2nd Marine Aircraft Wing, keep order with the Military Police, train the next
+        class of recruits, or work a courtroom with the Judge Advocate Division. There is a spot for you.
       </p>
       <Link href="/enlist" className="btn-black mt-10">Start Your Enlistment</Link>
     </div>
