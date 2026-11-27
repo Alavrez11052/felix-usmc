@@ -4,7 +4,7 @@ import { getCurrentUser } from "@/lib/auth";
 import { hasPermission } from "@/lib/permissions";
 import { createAnnouncement, deleteAnnouncement, updateAnnouncement } from "@/lib/actions";
 
-export const metadata = { title: "Admin — Announcements" };
+export const metadata = { title: "Admin: Announcements" };
 
 export default async function AdminAnnouncements() {
   const me = await getCurrentUser();
