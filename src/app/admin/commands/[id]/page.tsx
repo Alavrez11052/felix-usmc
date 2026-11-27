@@ -4,7 +4,7 @@ import { hasPermission } from "@/lib/permissions";
 import { db } from "@/lib/db";
 import { addStaff, addUnit, deleteStaff, deleteUnit, updateCommand, updateStaff, updateUnit } from "@/lib/actions";
 
-export const metadata = { title: "Admin — Edit Command" };
+export const metadata = { title: "Admin: Edit Command" };
 
 export default async function EditCommand({ params }: { params: { id: string } }) {
   const me = await getCurrentUser();
@@ -16,7 +16,7 @@ export default async function EditCommand({ params }: { params: { id: string } }
   if (!cmd) notFound();
   return (
     <div>
-      <h1 className="h-display text-3xl">Edit — {cmd.abbr || cmd.name}</h1>
+      <h1 className="h-display text-3xl">Edit: {cmd.abbr || cmd.name}</h1>
 
       <section className="admin-card mt-6">
         <h2 className="font-display font-bold uppercase tracking-wide">Command Details</h2>
