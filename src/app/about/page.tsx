@@ -13,37 +13,42 @@ export default async function About() {
         <Image src="/images/marforcom-2mardiv.png" alt="2nd Marine Division, Follow Me" fill className="object-cover grayscale" />
       </div>
       <div className="mt-10 space-y-5 text-neutral-700 leading-relaxed">
-        <p>Felix&rsquo;s U.S. Marine Corps is an imitation of the modern-day Marine Corps simulated on ROBLOX.</p>
+        <p>Felix&rsquo;s USMC is a semi-realistic Roblox military simulation group built around the modern day United States Marine Corps.</p>
         <p>
-          The United States Marine Corps is responsible for conducting expeditionary and amphibious warfare through
-          combined arms, implementing its own infantry, artillery, aerial, and special operations forces. It is one of
-          the eight uniformed services of the United States.
+          The real Marine Corps is one of the eight uniformed services of the United States. It conducts expeditionary
+          and amphibious warfare with its own infantry, artillery, aviation, and special operations forces. This group
+          copies that structure at group scale: a Headquarters, six commands, and a rank structure that runs from
+          Private to Lieutenant General.
         </p>
-        <p><strong className="text-ink">Founded:</strong> November 14th, 2026.</p>
+        <p><strong className="text-ink">Founded:</strong> November 14, 2026.</p>
       </div>
       <h2 className="h-display text-2xl mt-12 border-l-8 border-scarlet pl-4">Our Mission</h2>
       <p className="mt-4 text-neutral-700 leading-relaxed">
-        Our mission is simple. Train civilians into Marines, put a fighting force in the field, keep order, and
-        hold ourselves to the standard. Training and Education Command runs the training. Marine Forces Command
-        and the special operations command provide the fighting force. The Military Police keep order, and the
-        Judge Advocate Division and the Inspector General keep everyone honest.
+        The work of the group breaks down by command. Training and Education Command trains recruits and officer
+        candidates. Marine Forces Command and Marine Special Operations Command provide the fighting force. The
+        Military Police enforce the law. The Judge Advocate Division handles military justice, and the Inspector
+        General checks that all of it is being done properly. Headquarters coordinates the six commands and sets
+        the standard they are held to.
       </p>
       <h2 className="h-display text-2xl mt-12 border-l-8 border-scarlet pl-4">Semi-Realism Philosophy</h2>
       <p className="mt-4 text-neutral-700 leading-relaxed">
-        We aim for semi-realistic. The structure, the discipline, and the chain of command are treated as real.
-        So are the patrols, the weekly trainings, and the promotions. It is still a game, though, and it is
-        supposed to be fun.
+        Semi-realistic means the military side is taken seriously and the game side is not forgotten. Ranks mean
+        something, orders are followed, and the chain of command is used the way it is supposed to be used. Patrols,
+        trainings, and promotions are run properly. At the same time, this is Roblox. Members are here to enjoy it,
+        and leadership is expected to keep it that way.
       </p>
       <h2 className="h-display text-2xl mt-12 border-l-8 border-scarlet pl-4">Organizational Structure</h2>
       <p className="mt-4 text-neutral-700 leading-relaxed">
-        Headquarters leads six commands: {commands.map((c) => c.name).join(", ")}. Each command is led by a commanding
-        officer, a deputy, and a senior enlisted advisor, and is made up of its own subordinate units.
+        Headquarters leads the group. Under it are six commands: {commands.map((c) => c.name).join(", ")}. Each command
+        is led by a Commanding Officer, a Deputy Commanding Officer, and a Senior Enlisted Advisor, and each is made
+        up of its own divisions.
       </p>
       <h2 className="h-display text-2xl mt-12 border-l-8 border-scarlet pl-4">Opportunities</h2>
       <p className="mt-4 text-neutral-700 leading-relaxed">
-        Plenty of positions are still open, and Headquarters is run by experienced members. You can fight with
-        the Raiders, fly with the 2nd Marine Aircraft Wing, keep order with the Military Police, train the next
-        class of recruits, or work a courtroom with the Judge Advocate Division. There is a spot for you.
+        Recruiting is open in all six commands, and Headquarters is run by experienced members. After recruit training
+        you can go to the infantry with the 2nd Marine Division, fly with the 2nd Marine Aircraft Wing, patrol with
+        the Military Police, try out for the Raiders, train the next class of recruits with TECOM, or work cases with
+        the Judge Advocate Division. Every one of those paths starts the same way, with recruit training.
       </p>
       <Link href="/enlist" className="btn-black mt-10">Start Your Enlistment</Link>
     </div>
