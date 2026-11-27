@@ -6,7 +6,7 @@ export default async function ChainOfCommand() {
   const leaders = await getLeadership();
   return (
     <div className="mx-auto max-w-5xl px-4 py-14">
-      <h1 className="h-display text-4xl border-l-8 border-ink pl-4">Chain of Command</h1>
+      <h1 className="h-display text-4xl border-l-8 border-scarlet pl-4">Chain of Command</h1>
       <p className="mt-5 text-neutral-700 leading-relaxed">
         At Felix&rsquo;s United States Marine Corps, we value structure and discipline. Listed below is the Chain of
         Command for our unit, showing the leadership structure, roles, and responsibilities of those who guide our
