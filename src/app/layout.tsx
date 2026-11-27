@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: { default: "Felix's United States Marine Corps", template: "%s | Felix's USMC" },
   description: "Felix's United States Marine Corps, a Roblox military simulation community. Honor, Courage, Commitment.",
 };
-export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
