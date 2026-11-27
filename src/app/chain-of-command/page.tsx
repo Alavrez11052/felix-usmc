@@ -15,9 +15,6 @@ export default async function ChainOfCommand() {
       <div className="mt-8 border-2 border-ink divide-y-2 divide-ink">
         {leadership.map((l) => (
           <div key={l.id} className="p-4 sm:p-5 flex items-center gap-4 bg-white">
-            <div className="w-20 sm:w-24 shrink-0 text-center">
-              <div className="bg-scarlet text-paper font-display font-black px-2 py-2 text-sm sm:text-base leading-tight">{l.abbr}</div>
-            </div>
             <div className="min-w-0">
               <div className="font-display font-bold uppercase tracking-wide leading-snug">{l.title}</div>
               <div className="text-xs uppercase tracking-widest text-ash">Headquarters</div>
