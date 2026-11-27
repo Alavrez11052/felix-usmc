@@ -17,7 +17,7 @@ export default async function CommandPage({ params }: { params: { slug: string }
     <div>
       <section className="relative bg-ink text-paper">
         <div className="absolute inset-0">
-          <Image src={cmd.image || "/images/hero-honor.png"} alt={cmd.name} fill priority className="object-cover grayscale opacity-45" />
+          <Image src={cmd.image || "/images/hero-honor.png"} alt={cmd.name} fill priority className="object-cover opacity-45" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/85" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20">
@@ -30,7 +30,7 @@ export default async function CommandPage({ params }: { params: { slug: string }
           {cmd.discordUrl ? (
             <a href={cmd.discordUrl} target="_blank" rel="noreferrer" className="btn-white mt-6">Join the {cmd.abbr} Discord</a>
           ) : (
-            <span className="inline-block mt-6 border-2 border-paper/50 text-paper/70 font-display font-bold uppercase tracking-widest text-sm px-6 py-3">Discord — WIP</span>
+            <span className="inline-block mt-6 border-2 border-paper/50 text-paper/70 font-display font-bold uppercase tracking-widest text-sm px-6 py-3">Discord: Coming Soon</span>
           )}
         </div>
       </section>
