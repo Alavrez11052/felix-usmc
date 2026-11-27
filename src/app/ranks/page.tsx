@@ -1,4 +1,5 @@
 import { getRankStructure } from "@/lib/data";
+import Insignia from "@/components/Insignia";
 
 export const metadata = { title: "Rank Structure" };
 
@@ -19,6 +20,7 @@ export default async function Ranks() {
               {cat.ranks.map((r) => (
                 <div key={r.id} className="flex items-center gap-4 px-4 py-3">
                   <span className="font-display font-black w-16 shrink-0">{r.code}</span>
+                  <Insignia grade={r.code} className="h-11 w-11 shrink-0" />
                   <span className="font-medium">{r.name}</span>
                 </div>
               ))}
