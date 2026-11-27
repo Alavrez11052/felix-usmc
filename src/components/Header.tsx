@@ -17,11 +17,11 @@ export default function Header({ bannerText, loggedIn }: { bannerText?: string |
   return (
     <header className="sticky top-0 z-50">
       {bannerText ? (
-        <div className="bg-paper text-ink text-center text-xs font-display font-bold uppercase tracking-widest2 py-2 px-4 border-b border-ink">
+        <div className="bg-scarlet text-white text-center text-xs font-display font-bold uppercase tracking-widest2 py-2 px-4">
           {bannerText}
         </div>
       ) : null}
-      <div className="bg-ink text-paper border-b-4 border-paper/90 shadow-[0_1px_0_0_#000]">
+      <div className="bg-gradient-to-r from-scarletdeep via-ink to-scarletdeep text-paper border-b-2 border-gold shadow-lg">
         <div className="mx-auto max-w-7xl px-4 flex items-center gap-4 h-16">
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image src="/images/ega.png" alt="Eagle, Globe, and Anchor" width={40} height={42} className="h-10 w-auto" />
@@ -31,11 +31,11 @@ export default function Header({ bannerText, loggedIn }: { bannerText?: string |
           </Link>
           <nav className="hidden lg:flex items-center gap-6 ml-auto text-[13px] font-display font-bold uppercase tracking-widest">
             {LINKS.map((l) => (
-              <Link key={l.href} href={l.href} className="hover:text-fog text-paper/85 transition-colors">{l.label}</Link>
+              <Link key={l.href} href={l.href} className="hover:text-goldsoft text-paper/85 transition-colors">{l.label}</Link>
             ))}
           </nav>
           <div className="flex items-center gap-3 ml-auto lg:ml-0">
-            <Link href="/enlist" className="hidden sm:inline-block bg-paper text-ink font-display font-bold uppercase tracking-widest text-xs px-4 py-2 border-2 border-paper hover:bg-transparent hover:text-paper transition-colors">
+            <Link href="/enlist" className="hidden sm:inline-block bg-scarlet text-white font-display font-bold uppercase tracking-widest text-xs px-4 py-2 rounded-md shadow border-2 border-scarlet hover:bg-scarletdeep hover:border-scarletdeep transition-all">
               Enlist Now
             </Link>
             <Link href={loggedIn ? "/admin" : "/login"} className="hidden sm:inline-block text-paper/70 hover:text-paper text-xs font-display font-bold uppercase tracking-widest">

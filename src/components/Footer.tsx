@@ -5,7 +5,7 @@ import { getConfig } from "@/lib/data";
 export default async function Footer() {
   const cfg = await getConfig();
   return (
-    <footer className="bg-ink text-paper mt-0">
+    <footer className="bg-ink text-paper mt-0 border-t-2 border-gold">
       <div className="mx-auto max-w-7xl px-4 py-12 grid gap-10 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
@@ -22,7 +22,7 @@ export default async function Footer() {
           </div>
         </div>
         <div>
-          <h3 className="font-display font-bold uppercase tracking-widest text-sm border-b border-white/20 pb-2">Quick Links</h3>
+          <h3 className="font-display font-bold uppercase tracking-widest text-sm border-b border-gold/60 pb-2 text-goldsoft">Quick Links</h3>
           <ul className="mt-3 space-y-2 text-paper/80 text-sm">
             <li><Link href="/" className="hover:text-paper">Home</Link></li>
             <li><Link href="/about" className="hover:text-paper">About Us</Link></li>
@@ -33,7 +33,7 @@ export default async function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="font-display font-bold uppercase tracking-widest text-sm border-b border-white/20 pb-2">Disclaimer</h3>
+          <h3 className="font-display font-bold uppercase tracking-widest text-sm border-b border-gold/60 pb-2 text-goldsoft">Disclaimer</h3>
           <p className="mt-3 text-paper/60 text-sm leading-relaxed">
             Felix&rsquo;s United States Marine Corps is an independently operated Roblox military simulation community.
             It is not affiliated with, endorsed by, or officially associated with the United States Department of
