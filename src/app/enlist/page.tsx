@@ -6,8 +6,8 @@ export const metadata = { title: "Enlist" };
 const STEPS = [
   { title: "Join the Discord", text: "Every enlistment starts in our Discord server. Introduce yourself and let Headquarters know you are here to enlist." },
   { title: "Join the Roblox Group", text: "Request to join the official Felix's USMC Roblox group so your rank and record can be tracked." },
-  { title: "Complete Recruit Training", text: "TECOM's Recruit Training Regiment turns civilians into United States Marines. Every Marine starts as an E-1 Private (RT/BOOTCAMP)." },
-  { title: "Choose Your Command", text: "After training, take your place in one of our six commands — from the Raiders of MARSOC to the Military Police." },
+  { title: "Complete Recruit Training", text: "Recruit training comes first. The Recruit Training Regiment turns civilians into Marines, and everyone starts out as a Private." },
+  { title: "Choose Your Command", text: "After training, join one of the six commands. Raiders, Military Police, aviation, law, and more." },
 ];
 
 export default async function Enlist() {
@@ -16,8 +16,8 @@ export default async function Enlist() {
     <div className="mx-auto max-w-5xl px-4 py-14">
       <h1 className="h-display text-4xl border-l-8 border-scarlet pl-4">Ready to Enlist?</h1>
       <p className="mt-5 text-neutral-700 leading-relaxed max-w-3xl">
-        Take the first step toward becoming a United States Marine. Join our Discord server and Roblox group to begin
-        your enlistment process and earn your title of MARINE.
+        Becoming a Marine here takes four steps. Start with the Discord and the Roblox group, finish recruit
+        training, then pick your command.
       </p>
       <div className="mt-8 flex flex-wrap gap-4">
         {cfg.discordUrl && <a href={cfg.discordUrl} target="_blank" rel="noreferrer" className="btn-black">Join Our Discord</a>}
@@ -51,7 +51,7 @@ export default async function Enlist() {
         ))}
       </div>
       <p className="mt-6 text-sm text-neutral-600">
-        Before you enlist: work through the chain of command — if you have a problem, contact your direct superior
+        Before you enlist, learn the chain of command. If you have a problem, take it to your direct superior
         first. Discipline and structure are what make this Corps what it is.
       </p>
     </div>
