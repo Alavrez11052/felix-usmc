@@ -35,13 +35,13 @@ export default function AddAdminForm() {
       )}
       {state?.password && (
         <div className="mt-4 border-2 border-ink bg-bone px-4 py-3">
-          <div className="font-display font-bold uppercase tracking-wide text-sm">Account created — give them this password</div>
+          <div className="font-display font-bold uppercase tracking-wide text-sm">Account created. Give them this password</div>
           <div className="mt-2 text-sm space-y-1">
             <div>Email: <strong>{state.email}</strong></div>
             <div>Temporary password: <strong className="font-mono text-base tracking-wider">{state.password}</strong></div>
           </div>
           <p className="mt-2 text-xs text-neutral-600">
-            This password is shown only once — copy it now. They sign in at /login with it and can change it
+            This password is shown only once. Copy it now. They sign in at /login with it and can change it
             under <strong>My Account</strong> in the admin dashboard.
           </p>
         </div>

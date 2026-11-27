@@ -6,7 +6,7 @@ export default function CommandCard({ command }: { command: Command & { units: U
   return (
     <article className="card flex flex-col overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       <div className="relative h-44 bg-ink overflow-hidden">
-        <Image src={command.image || "/images/hero-honor.png"} alt={command.name} fill className="object-cover grayscale group-hover:scale-105 transition-transform duration-500" />
+        <Image src={command.image || "/images/hero-honor.png"} alt={command.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-scarletdeep/95 via-black/50 to-transparent p-4 pt-10">
           <div className="text-goldsoft font-display font-black uppercase tracking-wide leading-tight">{command.abbr}</div>
         </div>

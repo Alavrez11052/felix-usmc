@@ -31,7 +31,7 @@ export default function Header({ bannerText, loggedIn }: { bannerText?: string |
           </Link>
           <nav className="hidden lg:flex items-center gap-6 ml-auto text-[13px] font-display font-bold uppercase tracking-widest">
             {LINKS.map((l) => (
-              <Link key={l.href} href={l.href} className="hover:text-goldsoft text-paper/85 transition-colors">{l.label}</Link>
+              <Link key={l.href} href={l.href} className="nav-link hover:text-goldsoft text-paper/85 transition-colors">{l.label}</Link>
             ))}
           </nav>
           <div className="flex items-center gap-3 ml-auto lg:ml-0">
@@ -47,7 +47,7 @@ export default function Header({ bannerText, loggedIn }: { bannerText?: string |
           </div>
         </div>
         {open && (
-          <nav className="lg:hidden border-t border-white/15 px-4 py-3 flex flex-col gap-3 text-sm font-display font-bold uppercase tracking-widest">
+          <nav className="anim-menu lg:hidden border-t border-white/15 px-4 py-3 flex flex-col gap-3 text-sm font-display font-bold uppercase tracking-widest">
             {LINKS.map((l) => (
               <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</Link>
             ))}
