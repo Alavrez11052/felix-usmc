@@ -3,10 +3,10 @@ import { getAffiliates } from "@/lib/data";
 export const metadata = { title: "Affiliated Groups" };
 
 const REQUIREMENTS = [
-  "The group must be active for more than 2 weeks.",
-  "The group must have 30+ members in its Discord and Roblox group.",
-  "The group must not contain NSFW or ToS-violating content.",
-  "No NSFW or ToS-violating content may appear in its Discord, Roblox group, or social media.",
+  "Around our member size",
+  "Competent Headquarters",
+  "Realistic and Modern",
+  "One branch rule, e.g if we are allied with a BA, we will not ally with another BA.",
 ];
 
 export default async function Affiliates() {
@@ -14,25 +14,28 @@ export default async function Affiliates() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-14">
       <h1 className="h-display text-4xl border-l-8 border-scarlet pl-4">Affiliated Groups</h1>
-      {affiliates.length === 0 ? (
-        <p className="mt-5 text-neutral-700 italic">In Progress...</p>
-      ) : (
+
+      <h2 className="h-display text-2xl mt-10">Our Affiliates</h2>
+      <p className="mt-4 text-neutral-700 leading-relaxed max-w-3xl">
+        We have a set of requirements before we establish an alliance with a group. Alliances can be
+        terminated if the group has faced inactivity and other reasons. The requirements will be
+        stated below.
+      </p>
+
+      {affiliates.length > 0 ? (
         <div className="mt-8 grid sm:grid-cols-2 gap-5">
           {affiliates.map((a) => (
             <article key={a.id} className="card p-5">
-              <h2 className="font-display font-bold uppercase tracking-wide">{a.name}</h2>
+              <h3 className="font-display font-bold uppercase tracking-wide">{a.name}</h3>
               {a.description && <p className="mt-2 text-sm text-neutral-700">{a.description}</p>}
               {a.url && <a href={a.url} target="_blank" rel="noreferrer" className="btn-outline-b mt-4 !px-4 !py-2 text-xs">Visit Group</a>}
             </article>
           ))}
         </div>
-      )}
-      <div className="mt-10 border-2 border-ink bg-bone p-6">
-        <h2 className="font-display font-bold uppercase tracking-wide">Become an Affiliated Group</h2>
-        <p className="mt-2 text-sm text-neutral-700">
-          We currently do not have any affiliated groups. If you wish to become one, please contact a member of HQ and
-          meet the requirements below:
-        </p>
+      ) : null}
+
+      <div className="mt-10 border-2 border-ink bg-bone p-6 rounded-xl">
+        <h2 className="font-display font-bold uppercase tracking-wide">Requirements to Affiliate with Felix&rsquo;s U.S Marine Corps</h2>
         <ol className="mt-4 space-y-2 text-sm text-neutral-800 list-decimal list-inside">
           {REQUIREMENTS.map((r) => <li key={r}>{r}</li>)}
         </ol>
