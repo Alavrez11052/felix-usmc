@@ -4,7 +4,7 @@ import { getCurrentUser } from "@/lib/auth";
 import { hasPermission } from "@/lib/permissions";
 import { updateRank } from "@/lib/actions";
 
-export const metadata = { title: "Admin — Ranks" };
+export const metadata = { title: "Admin: Ranks" };
 
 export default async function AdminRanks() {
   const me = await getCurrentUser();
