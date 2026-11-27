@@ -11,6 +11,10 @@ const config: Config = {
         fog: "#E8E8E8",
         paper: "#FFFFFF",
         bone: "#F4F4F4",
+        scarlet: "#981E32",
+        scarletdeep: "#5E1220",
+        gold: "#C5A253",
+        goldsoft: "#E9D8A6",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
