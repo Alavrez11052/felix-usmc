@@ -8,7 +8,7 @@ export default async function Ranks() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-14">
       <h1 className="h-display text-4xl border-l-8 border-scarlet pl-4">Rank Structure</h1>
-      <p className="mt-4 text-neutral-700">The rank structure of Felix&rsquo;s United States Marine Corps — {total} ranks, from Lieutenant General to Private.</p>
+      <p className="mt-4 text-neutral-700">The rank structure of Felix&rsquo;s United States Marine Corps: {total} ranks, from Lieutenant General down to Private.</p>
       <div className="mt-10 space-y-10">
         {categories.map((cat) => (
           <section key={cat.id}>
