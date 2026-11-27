@@ -4,7 +4,7 @@ import { getCurrentUser } from "@/lib/auth";
 import { hasPermission } from "@/lib/permissions";
 import { updateConfig } from "@/lib/actions";
 
-export const metadata = { title: "Admin — Configuration" };
+export const metadata = { title: "Admin: Configuration" };
 
 export default async function AdminConfig() {
   const me = await getCurrentUser();
