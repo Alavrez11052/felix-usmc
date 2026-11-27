@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCommand, getCommands } from "@/lib/data";
+import Insignia, { gradeForRankTitle } from "@/components/Insignia";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const cmd = await getCommand(params.slug);
@@ -62,9 +63,12 @@ export default async function CommandPage({ params }: { params: { slug: string }
           <h2 className="h-display text-2xl border-l-8 border-scarlet pl-4">Chain of Command</h2>
           <div className="mt-5 border border-neutral-300 divide-y divide-neutral-200">
             {cmd.staff.map((s) => (
-              <div key={s.id} className="p-4 bg-white">
-                <div className="text-[11px] font-display font-bold uppercase tracking-widest text-ash">{s.rankLabel} · {s.roleTitle}</div>
-                <div className="font-display font-bold mt-1">{s.name}</div>
+              <div key={s.id} className="p-4 bg-white flex items-center gap-3">
+                <Insignia grade={/^[EO]-\d/.test(s.rankLabel ?? "") ? s.rankLabel : gradeForRankTitle(s.rankLabel)} className="h-10 w-10 shrink-0" />
+                <div>
+                  <div className="text-[11px] font-display font-bold uppercase tracking-widest text-ash">{s.rankLabel} · {s.roleTitle}</div>
+                  <div className="font-display font-bold mt-1">{s.name}</div>
+                </div>
               </div>
             ))}
             {cmd.staff.length === 0 && <div className="p-4 bg-white text-sm text-neutral-600">No leadership listed yet.</div>}
