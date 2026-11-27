@@ -11,7 +11,7 @@ export default async function Setup() {
     <div className="mx-auto max-w-md px-4 py-16">
       <h1 className="h-display text-3xl border-l-8 border-ink pl-4">Owner Setup</h1>
       <p className="mt-3 text-sm text-neutral-600">
-        No administrator account exists yet. Create the owner account — this is a one-time step, and it must use the
+        No administrator account exists yet. Create the owner account. This is a one-time step, and it must use the
         site owner's email address below. After this, the owner can invite other administrators by email from the
         dashboard; each invitee sets their own password from a one-time link.
       </p>
