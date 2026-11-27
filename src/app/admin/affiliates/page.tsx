@@ -4,7 +4,7 @@ import { getCurrentUser } from "@/lib/auth";
 import { hasPermission } from "@/lib/permissions";
 import { addAffiliate, deleteAffiliate } from "@/lib/actions";
 
-export const metadata = { title: "Admin — Affiliates" };
+export const metadata = { title: "Admin: Affiliates" };
 
 export default async function AdminAffiliates() {
   const me = await getCurrentUser();
