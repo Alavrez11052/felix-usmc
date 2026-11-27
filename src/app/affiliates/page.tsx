@@ -13,7 +13,7 @@ export default async function Affiliates() {
   const affiliates = await getAffiliates();
   return (
     <div className="mx-auto max-w-5xl px-4 py-14">
-      <h1 className="h-display text-4xl border-l-8 border-ink pl-4">Affiliated Groups</h1>
+      <h1 className="h-display text-4xl border-l-8 border-scarlet pl-4">Affiliated Groups</h1>
       {affiliates.length === 0 ? (
         <p className="mt-5 text-neutral-700 italic">In Progress...</p>
       ) : (
