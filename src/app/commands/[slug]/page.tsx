@@ -75,7 +75,7 @@ export default async function CommandPage({ params }: { params: { slug: string }
           </div>
           <div className="mt-8 bg-ink text-paper p-5">
             <h3 className="font-display font-bold uppercase tracking-wide">Serve With {cmd.abbr}</h3>
-            <p className="mt-2 text-sm text-paper/75">Earn your title of Marine, then take your place in this command.</p>
+            <p className="mt-2 text-sm text-paper/75">Every Marine starts with recruit training. Once you graduate, you can join this command.</p>
             <Link href="/enlist" className="btn-white mt-4 w-full text-center">Enlist Now</Link>
           </div>
         </aside>
