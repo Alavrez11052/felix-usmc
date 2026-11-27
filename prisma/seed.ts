@@ -26,12 +26,12 @@ async function main() {
   const commands = [
     {
       slug: "marsoc", name: "Marine Special Operations Command", abbr: "MARSOC", sortOrder: 1,
-      tagline: "Marine Raiders — experts at CQB and SOF capabilities",
-      description: "The Marine Special Operations Command (MARSOC) is the United States Marine Corps' main special operations force command. Marine Raiders are experts at CQB and other SOF capabilities.",
-      discordUrl: "https://discord.gg/UZNknayCpm", image: "/images/marsoc-raiders.png",
+      tagline: "Home of the Marine Raiders",
+      description: "The special operations command of the Marine Corps. Its Raiders are hand picked and trained for close quarters combat and fast, direct missions that regular units do not take on.",
+      discordUrl: "https://discord.gg/UZNknayCpm", image: "/images/cmd-marsoc.jpg",
       units: [
-        { name: "Marine Raider Regiment", description: "The United States Marine Corps' most elite — experts at CQB and fast-paced combat, the main SOF regiment.", discordNote: "WIP" },
-        { name: "Marine Raider Training Center", description: "Processes Marines for the title of \"Marine Raider\"; on completion of A&S and ITC the Marine earns their Marine Special Operator Insignia. MRTC Marines are the instructors of A&S/ITC.", discordNote: "WIP" },
+        { name: "Marine Raider Regiment", description: "The main fighting force of the command. Raiders specialize in close quarters combat and fast paced operations.", discordNote: "WIP" },
+        { name: "Marine Raider Training Center", description: "Runs selection and the training course that follows it. Marines who finish earn the title of Marine Raider and the Marine Special Operator Insignia.", discordNote: "WIP" },
       ],
       staff: [
         { roleTitle: "Commanding General", rankLabel: "O-8", name: "lam_Eddie" },
@@ -41,14 +41,14 @@ async function main() {
     },
     {
       slug: "mcmp", name: "Marine Corps Military Police", abbr: "MCMP", sortOrder: 2,
-      tagline: "Semper Vigilans — Always Vigilant",
-      description: "The Marine Corps Military Police (MCMP) provides support to the United States Marine Corps by enforcing the UCMJ. The Marine Corps Military Police has four units within MCMP.",
-      discordUrl: "https://discord.gg/ZkZKxfacvQ", image: "/images/hero-honor.png",
+      tagline: "Semper Vigilans (Always Vigilant)",
+      description: "The Military Police keep order and enforce the Uniform Code of Military Justice. They patrol the base, respond to calls, work checkpoints, and investigate crimes involving Marines. The command is made up of four units.",
+      discordUrl: "https://discord.gg/ZkZKxfacvQ", image: "/images/cmd-mcmp.jpg",
       units: [
-        { name: "Provost Marshal's Office", description: "Enforces order and discipline, and protects service members, their families and civilian workers.", discordNote: "MP DISCORD" },
-        { name: "Criminal Investigation Division", description: "Investigates criminal offenses involving service members and civilians associated with the U.S. Marine Corps.", discordNote: "WIP" },
-        { name: "Special Reaction Team", description: "High-risk situations, hostage rescue, counter-terrorism, armed suspects and barricaded individuals.", discordNote: "MP DISCORD" },
-        { name: "Law Enforcement Battalion", description: "Maintains law, order and discipline.", discordNote: "MP DISCORD" },
+        { name: "Provost Marshal's Office", description: "The headquarters of the Military Police. It enforces order and discipline, and protects Marines, their families, and civilian workers.", discordNote: "MP DISCORD" },
+        { name: "Criminal Investigation Division", description: "Investigates crimes involving Marines and civilians connected to the Marine Corps.", discordNote: "WIP" },
+        { name: "Special Reaction Team", description: "The tactical team of the Military Police. They handle hostage situations, barricaded suspects, and other high risk calls.", discordNote: "MP DISCORD" },
+        { name: "Law Enforcement Battalion", description: "Runs patrols and keeps law and order wherever the command needs it.", discordNote: "MP DISCORD" },
       ],
       staff: [
         { roleTitle: "Provost Marshal General", rankLabel: "O-9", name: "KUNALNG6" },
@@ -59,11 +59,11 @@ async function main() {
     {
       slug: "tecom", name: "Training & Education Command", abbr: "TECOM", sortOrder: 3,
       tagline: "The backbone of training within the Marine Corps",
-      description: "Training and Education Command (TECOM) is the United States Marine Corps' main training command. TECOM leads the Marine Corps' individual-entry-level training and professional military education — teaching, ensuring common knowledge, and transforming civilians into Marines. Without them, the Marine Corps would be a thing of the past.",
-      discordUrl: "https://discord.gg/yEAN9WGGn", image: "/images/tecom-recon.png",
+      description: "Training and Education Command runs all Marine Corps training. Every Marine starts here, at recruit training or at Officer Candidate School, and Marines come back throughout their careers for more schooling.",
+      discordUrl: "https://discord.gg/yEAN9WGGn", image: "/images/cmd-tecom.jpg",
       units: [
-        { name: "Recruit Training Regiment", description: "Turns civilians into United States Marines at Marine Corps Recruit Depot, led by Drill Instructors — the best of the best.", discordNote: "WIP" },
-        { name: "Officer Candidate School", description: "Trains new officers; OCS Commanders decide whether a candidate is ready to become an officer.", discordNote: "WIP" },
+        { name: "Recruit Training Regiment", description: "Runs boot camp at the Marine Corps Recruit Depot. Drill Instructors turn civilians into Marines.", discordNote: "WIP" },
+        { name: "Officer Candidate School", description: "Trains and screens future officers. The staff decide who is ready to lead Marines.", discordNote: "WIP" },
       ],
       staff: [
         { roleTitle: "Commanding General", rankLabel: "O-9", name: "Quorvex1212" },
@@ -74,11 +74,11 @@ async function main() {
     {
       slug: "marforcom", name: "Marine Forces Command", abbr: "MARFORCOM", sortOrder: 4,
       tagline: "The main fighting force of the United States Marine Corps",
-      description: "The Marine Forces Command is the main fighting force of the United States Marine Corps. MARFORLANT was officially named the Marine Corps Forces Command on the 30th December, 2004. MARFORCOM is home of 2 units: the 2nd Marine Division (2MARDIV) and the 2nd Marine Aircraft Wing (2MAW).",
-      discordUrl: "https://discord.gg/S3ZF94cPqZ", image: "/images/marforcom-2mardiv.png",
+      description: "Marine Forces Command is the fighting force of the Marine Corps. It is built around two units: the 2nd Marine Division on the ground and the 2nd Marine Aircraft Wing in the air.",
+      discordUrl: "https://discord.gg/S3ZF94cPqZ", image: "/images/cmd-marforcom.jpg",
       units: [
-        { name: "2nd Marine Division", description: "Ground combat division of infantry regiments and supporting battalions, stationed at Marine Corps Base Camp Lejeune, North Carolina, under II Marine Expeditionary Force.", discordNote: "WIP" },
-        { name: "2nd Marine Aircraft Wing", description: "Provides aviation support to the Marine Forces Command.", discordNote: "WIP" },
+        { name: "2nd Marine Division", description: "The ground combat division, based at Camp Lejeune, North Carolina. Its infantry regiments and supporting battalions do the fighting on the ground.", discordNote: "WIP" },
+        { name: "2nd Marine Aircraft Wing", description: "The aviation side of the command. Its squadrons fly in support of the division.", discordNote: "WIP" },
       ],
       staff: [
         { roleTitle: "Commanding General", rankLabel: "O-9", name: "Blu3Tig3r3" },
@@ -88,9 +88,9 @@ async function main() {
     },
     {
       slug: "jad", name: "Judge Advocate Division", abbr: "JAD", sortOrder: 5,
-      tagline: "Legal services, proceedings, and courts-martial",
-      description: "The Judge Advocate Division is responsible for advising Marine Headquarters regarding legal matters. JAD reviews investigations. Marines under JAD determine who is guilty and who is innocent. JAD provides legal services, legal proceedings and trials, courts-martial, and JAG officers.",
-      discordUrl: null, image: "/images/hero-honor.png",
+      tagline: "Legal advice, trials, and courts-martial",
+      description: "The Judge Advocate Division is the legal office of Headquarters. Its judge advocates advise commanders on the law, review investigations, and run trials and courts-martial.",
+      discordUrl: null, image: "/images/cmd-jad.jpg",
       units: [],
       staff: [
         { roleTitle: "Staff Judge Advocate to the CMC", rankLabel: "O-8", name: "2jami" },
@@ -100,9 +100,9 @@ async function main() {
     },
     {
       slug: "oigmc", name: "Office of the Inspector General of the Marine Corps", abbr: "OIGMC", sortOrder: 6,
-      tagline: "Inspections, accountability, and investigations",
-      description: "The Office of the Inspector General of the Marine Corps handles all logistical purposes of the United States Marine Corps, for example approving a decorations request, recommendations, etcetera. OIGMC conducts inspections, ensures accountability, and handles reporting and investigations — members are encouraged to report any violations. Marines under OIGMC are expected to be disciplined, as they contribute to the inspections of Marines during important events.",
-      discordUrl: null, image: "/images/hero-honor.png",
+      tagline: "Inspections and accountability",
+      description: "The Office of the Inspector General inspects units, checks that standards are being met, and investigates reports of wrongdoing. Any Marine can bring a problem to this office.",
+      discordUrl: null, image: "/images/cmd-oigmc.jpg",
       units: [],
       staff: [
         { roleTitle: "Chief of Staff", rankLabel: "COS", name: "MaximMax01" },
