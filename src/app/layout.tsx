@@ -7,7 +7,7 @@ import { getCurrentUser } from "@/lib/auth";
 
 export const metadata: Metadata = {
   title: { default: "Felix's United States Marine Corps", template: "%s | Felix's USMC" },
-  description: "Felix's United States Marine Corps — a Roblox military simulation community. Honor, Courage, Commitment.",
+  description: "Felix's United States Marine Corps, a Roblox military simulation community. Honor, Courage, Commitment.",
 };
 export const dynamic = "force-dynamic";
 

@@ -20,3 +20,25 @@ body { @apply bg-bone text-ink font-sans antialiased; }
 .card { @apply border border-neutral-200 bg-white rounded-2xl shadow-sm; }
 .admin-card { @apply border border-neutral-200 bg-white p-5 rounded-xl shadow-sm; }
 .tbl-input { @apply border border-neutral-300 bg-white px-2 py-1 text-sm w-full; }
+
+/* Motion system: subtle, consistent, and off for reduced-motion users */
+@keyframes fade-up { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes ken-burns { from { transform: scale(1); } to { transform: scale(1.08); } }
+@keyframes menu-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.anim-fade-up { opacity: 0; animation: fade-up 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) forwards; }
+.anim-page { animation: page-in 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+.anim-kenburns { animation: ken-burns 18s ease-out forwards; }
+.anim-menu { animation: menu-in 0.25s ease both; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+.card { transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease; }
+.btn-black:active, .btn-white:active, .btn-outline-w:active, .btn-outline-b:active { transform: scale(0.97); }
+.nav-link { position: relative; }
+.nav-link::after { content: ""; position: absolute; left: 0; bottom: -6px; height: 2px; width: 100%; background: #C5A253; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+.nav-link:hover::after { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+  .reveal, .anim-fade-up { opacity: 1 !important; transform: none !important; }
+}
