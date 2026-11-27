@@ -5,17 +5,18 @@
 @tailwind utilities;
 
 html { scroll-behavior: smooth; }
-body { @apply bg-paper text-ink font-sans antialiased; }
+body { @apply bg-bone text-ink font-sans antialiased; }
+::selection { background: #981E32; color: #fff; }
 
 .h-display { @apply font-display uppercase tracking-wide; font-weight: 800; }
 
-.btn-black { @apply inline-block bg-ink text-paper font-display font-bold uppercase tracking-widest text-sm px-6 py-3 border-2 border-ink hover:bg-paper hover:text-ink transition-colors; }
-.btn-white { @apply inline-block bg-paper text-ink font-display font-bold uppercase tracking-widest text-sm px-6 py-3 border-2 border-paper hover:bg-transparent hover:text-paper transition-colors; }
-.btn-outline-w { @apply inline-block bg-transparent text-paper font-display font-bold uppercase tracking-widest text-sm px-6 py-3 border-2 border-paper hover:bg-paper hover:text-ink transition-colors; }
-.btn-outline-b { @apply inline-block bg-transparent text-ink font-display font-bold uppercase tracking-widest text-sm px-6 py-3 border-2 border-ink hover:bg-ink hover:text-paper transition-colors; }
+.btn-black { @apply inline-block bg-scarlet text-white font-display font-bold uppercase tracking-widest text-sm px-6 py-3 rounded-md shadow-md border-2 border-scarlet hover:bg-scarletdeep hover:border-scarletdeep transition-all; }
+.btn-white { @apply inline-block bg-gold text-ink font-display font-bold uppercase tracking-widest text-sm px-6 py-3 rounded-md shadow-md border-2 border-gold hover:bg-goldsoft hover:border-goldsoft transition-all; }
+.btn-outline-w { @apply inline-block bg-transparent text-paper font-display font-bold uppercase tracking-widest text-sm px-6 py-3 rounded-md border-2 border-paper/80 hover:bg-paper hover:text-ink transition-all; }
+.btn-outline-b { @apply inline-block bg-transparent text-scarlet font-display font-bold uppercase tracking-widest text-sm px-6 py-3 rounded-md border-2 border-scarlet hover:bg-scarlet hover:text-white transition-all; }
 
-.field { @apply w-full border border-neutral-400 bg-white px-3 py-2 text-sm text-ink focus:outline-none focus:border-ink; }
+.field { @apply w-full border border-neutral-300 bg-white px-3 py-2 text-sm text-ink rounded-lg focus:outline-none focus:border-scarlet focus:ring-2 focus:ring-scarlet/25; }
 .label { @apply block text-xs font-display font-bold uppercase tracking-widest text-neutral-600 mb-1; }
-.card { @apply border border-neutral-300 bg-white; }
-.admin-card { @apply border border-neutral-300 bg-white p-5; }
+.card { @apply border border-neutral-200 bg-white rounded-2xl shadow-sm; }
+.admin-card { @apply border border-neutral-200 bg-white p-5 rounded-xl shadow-sm; }
 .tbl-input { @apply border border-neutral-300 bg-white px-2 py-1 text-sm w-full; }

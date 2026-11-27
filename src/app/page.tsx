@@ -30,7 +30,7 @@ export default async function Home() {
       <section className="relative bg-ink text-paper">
         <div className="absolute inset-0">
           <Image src="/images/hero-honor.png" alt="Marines — death before dishonor" fill priority className="object-cover opacity-60" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-scarletdeep/70 via-black/25 to-black/85" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-28 sm:py-36 text-center">
           <Image src="/images/ega.png" alt="Eagle, Globe, and Anchor" width={110} height={114} className="mx-auto h-24 w-auto" />
@@ -41,6 +41,7 @@ export default async function Home() {
             Felix&rsquo;s United States Marine Corps
           </p>
           <p className="mt-3 italic text-paper/75">&ldquo;Honor, Courage, Commitment.&rdquo;</p>
+          <div className="mx-auto mt-6 h-0.5 w-28 bg-gold" />
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link href="/commands" className="btn-white">Explore Our Commands</Link>
             <Link href="/enlist" className="btn-outline-w">Ready to Enlist?</Link>
@@ -54,12 +55,12 @@ export default async function Home() {
       </section>
 
       {/* STATS */}
-      <section className="bg-paper border-b-2 border-ink">
+      <section className="bg-gradient-to-r from-scarletdeep via-scarlet to-scarletdeep text-paper shadow-inner">
         <div className="mx-auto max-w-7xl px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((s) => (
             <div key={s.label}>
               <div className="font-display font-black text-4xl">{s.n}</div>
-              <div className="text-xs font-display font-bold uppercase tracking-widest2 text-ash mt-1">{s.label}</div>
+              <div className="text-xs font-display font-bold uppercase tracking-widest2 text-goldsoft mt-1">{s.label}</div>
             </div>
           ))}
         </div>
@@ -68,7 +69,7 @@ export default async function Home() {
       {/* WHO WE ARE */}
       <section className="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 className="h-display text-3xl border-l-8 border-ink pl-4">Who We Are</h2>
+          <h2 className="h-display text-3xl border-l-8 border-scarlet pl-4">Who We Are</h2>
           <p className="mt-5 text-neutral-700 leading-relaxed">
             Felix&rsquo;s U.S. Marine Corps is an imitation of the modern-day Marine Corps simulated on ROBLOX.
           </p>
@@ -82,7 +83,7 @@ export default async function Home() {
           </p>
           <Link href="/about" className="btn-outline-b mt-6">More About Us</Link>
         </div>
-        <div className="relative h-72 md:h-96 border-2 border-ink">
+        <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10">
           <Image src="/images/marsoc-raiders.png" alt="Marines overlooking a village" fill className="object-cover grayscale" />
         </div>
       </section>
@@ -100,8 +101,8 @@ export default async function Home() {
           </p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {HIGHLIGHTS.map((h, i) => (
-              <div key={h.title} className="border border-white/25 p-5">
-                <div className="font-display font-black text-3xl text-paper/40">0{i + 1}</div>
+              <div key={h.title} className="border border-white/15 bg-white/5 rounded-xl p-5 backdrop-blur-sm">
+                <div className="font-display font-black text-3xl text-gold">0{i + 1}</div>
                 <h3 className="mt-2 font-display font-bold uppercase tracking-wide text-sm">{h.title}</h3>
                 <p className="mt-2 text-sm text-paper/70 leading-relaxed">{h.text}</p>
               </div>
@@ -113,7 +114,7 @@ export default async function Home() {
       {/* FEATURED ANNOUNCEMENTS */}
       {featured.length > 0 && (
         <section className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="h-display text-3xl border-l-8 border-ink pl-4">Announcements</h2>
+          <h2 className="h-display text-3xl border-l-8 border-scarlet pl-4">Announcements</h2>
           <div className="mt-8 grid md:grid-cols-3 gap-5">
             {featured.map((a) => (
               <article key={a.id} className="card p-5">
@@ -128,9 +129,9 @@ export default async function Home() {
       )}
 
       {/* OUR COMMANDS */}
-      <section className="bg-bone border-y-2 border-ink">
+      <section className="bg-bone">
         <div className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="h-display text-3xl border-l-8 border-ink pl-4">Our Commands</h2>
+          <h2 className="h-display text-3xl border-l-8 border-scarlet pl-4">Our Commands</h2>
           <p className="mt-4 text-neutral-700">Everything listed below are our commands within Felix&rsquo;s U.S. Marine Corps.</p>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {commands.map((c) => <CommandCard key={c.id} command={c} />)}
@@ -142,7 +143,7 @@ export default async function Home() {
       <section className="relative bg-ink text-paper">
         <div className="absolute inset-0">
           <Image src="/images/tecom-recon.png" alt="Marines training at night" fill className="object-cover grayscale opacity-35" />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-scarletdeep/60 to-black/75" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center">
           <h2 className="h-display text-4xl">Ready to Enlist?</h2>
@@ -152,8 +153,8 @@ export default async function Home() {
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3 text-left">
             {["Join the Discord", "Join the Roblox Group", "Complete Recruit Training (TECOM)"].map((s, i) => (
-              <div key={s} className="border border-white/30 bg-black/50 px-4 py-3 text-sm font-display font-bold uppercase tracking-widest">
-                <span className="text-paper/50 mr-2">Step {i + 1}</span>{s}
+              <div key={s} className="border border-white/25 bg-black/50 rounded-lg px-4 py-3 text-sm font-display font-bold uppercase tracking-widest">
+                <span className="text-gold mr-2">Step {i + 1}</span>{s}
               </div>
             ))}
           </div>
