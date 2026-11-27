@@ -1,10 +1,6 @@
 [build]
-  command = "prisma generate && prisma db push && next build"
+  command = "prisma generate && prisma db push && npm run db:seed && next build"
   publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
-
-
-
-
