@@ -16,7 +16,7 @@ export default function CommandCard({ command }: { command: Command & { units: U
         {command.tagline && <p className="text-sm text-ash italic mt-1">{command.tagline}</p>}
         <p className="text-sm text-neutral-700 mt-3 line-clamp-3">{command.description}</p>
         <div className="mt-4 flex items-center gap-4 text-[11px] font-display font-bold uppercase tracking-widest text-ash">
-          <span>{command.units.length} Units</span>
+          <span>{command.units.length} Divisions</span>
           <span>{command.staff.length} Leadership Posts</span>
           <span>{command.discordUrl ? "Discord Open" : "Discord WIP"}</span>
         </div>

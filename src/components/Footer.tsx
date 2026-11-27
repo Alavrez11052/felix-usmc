@@ -42,7 +42,7 @@ export default async function Footer() {
         </div>
       </div>
       <div className="border-t border-white/15 py-4 text-center text-xs uppercase tracking-widest text-paper/50">
-        Property of Felix&rsquo;s USMC | Website developed by Moon
+        Property of Felix&rsquo;s USMC | Website developed by Trooper
       </div>
     </footer>
   );
