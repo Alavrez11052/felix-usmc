@@ -9,7 +9,7 @@ export default async function Commands() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-14">
       <h1 className="h-display text-4xl border-l-8 border-scarlet pl-4">Our Commands</h1>
-      <p className="mt-4 text-neutral-700">These are the six commands that make up Felix&rsquo;s United States Marine Corps.</p>
+      <p className="mt-4 text-neutral-700">Felix&rsquo;s USMC is made up of six commands, and each one does a different job. Open a command to see what it does, who leads it, and how to join it.</p>
       <Reveal>
       <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {commands.map((c) => <CommandCard key={c.id} command={c} />)}
