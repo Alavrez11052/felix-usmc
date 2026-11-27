@@ -9,7 +9,7 @@ export default async function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 grid gap-10 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <Image src="/images/ega.png" alt="Eagle, Globe, and Anchor" width={46} height={48} className="h-12 w-auto" />
+            <Image src="/images/ega-white.png" alt="Eagle, Globe, and Anchor" width={46} height={48} className="h-12 w-auto" />
             <div className="font-display font-black uppercase leading-tight">
               Felix&rsquo;s United States<br />Marine Corps
             </div>
