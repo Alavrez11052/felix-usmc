@@ -14,7 +14,7 @@ export default async function Enlist() {
   const [cfg, commands] = await Promise.all([getConfig(), getCommands()]);
   return (
     <div className="mx-auto max-w-5xl px-4 py-14">
-      <h1 className="h-display text-4xl border-l-8 border-ink pl-4">Ready to Enlist?</h1>
+      <h1 className="h-display text-4xl border-l-8 border-scarlet pl-4">Ready to Enlist?</h1>
       <p className="mt-5 text-neutral-700 leading-relaxed max-w-3xl">
         Take the first step toward becoming a United States Marine. Join our Discord server and Roblox group to begin
         your enlistment process and earn your title of MARINE.
@@ -34,7 +34,7 @@ export default async function Enlist() {
         ))}
       </div>
 
-      <h2 className="h-display text-2xl border-l-8 border-ink pl-4 mt-14">Command Discords</h2>
+      <h2 className="h-display text-2xl border-l-8 border-scarlet pl-4 mt-14">Command Discords</h2>
       <div className="mt-5 border border-neutral-300 divide-y divide-neutral-200 bg-white">
         {commands.map((c) => (
           <div key={c.id} className="flex flex-wrap items-center gap-3 p-4">
