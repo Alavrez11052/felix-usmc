@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { getCurrentUser } from "@/lib/auth";
 import { changePassword } from "@/lib/actions";
 
-export const metadata = { title: "Admin — My Account" };
+export const metadata = { title: "Admin: My Account" };
 
 export default async function MyAccount({ searchParams }: { searchParams: { done?: string; error?: string } }) {
   const user = await getCurrentUser();
