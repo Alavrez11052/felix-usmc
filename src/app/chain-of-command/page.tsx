@@ -1,4 +1,5 @@
 import { getLeadership } from "@/lib/data";
+import Insignia, { gradeForRankTitle } from "@/components/Insignia";
 
 export const metadata = { title: "Chain of Command" };
 
@@ -21,6 +22,7 @@ export default async function ChainOfCommand() {
               <div className="font-display font-bold uppercase tracking-wide">{l.title}</div>
               <div className={`text-xs uppercase tracking-widest ${i === 0 ? "text-paper/60" : "text-ash"}`}>Headquarters</div>
             </div>
+            <Insignia grade={gradeForRankTitle(l.rankTitle)} className="h-12 w-12 shrink-0" />
             <div className="text-right">
               <div className="font-display font-bold">{l.name}</div>
               {l.rankTitle && <div className={`text-xs uppercase tracking-widest ${i === 0 ? "text-paper/60" : "text-ash"}`}>{l.rankTitle}</div>}
