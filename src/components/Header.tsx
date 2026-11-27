@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const LINKS = [
   { href: "/", label: "Home" },
-  { href: "/commands", label: "Our Commands" },
+  { href: "/commands", label: "Commands" },
   { href: "/chain-of-command", label: "Chain of Command" },
   { href: "/ranks", label: "Rank Structure" },
-  { href: "/affiliates", label: "Affiliated Groups" },
+  { href: "/affiliates", label: "Affiliates" },
   { href: "/about", label: "About Us" },
 ];
 
@@ -26,7 +26,7 @@ export default function Header({ bannerText, loggedIn }: { bannerText?: string |
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image src="/images/ega.png" alt="Eagle, Globe, and Anchor" width={40} height={42} className="h-10 w-auto" />
             <span className="font-display font-black uppercase leading-tight tracking-wide text-sm sm:text-base whitespace-nowrap">
-              Felix&rsquo;s <span className="hidden sm:inline">United States</span> Marine Corps
+              Felix&rsquo;s <span className="hidden sm:inline">U.S.</span> Marine Corps
             </span>
           </Link>
           <nav className="hidden lg:flex items-center gap-7 ml-auto text-sm font-display font-bold uppercase tracking-wide">
@@ -39,7 +39,7 @@ export default function Header({ bannerText, loggedIn }: { bannerText?: string |
               Enlist Now
             </Link>
             <Link href={loggedIn ? "/admin" : "/login"} className="hidden sm:inline-block whitespace-nowrap text-paper/70 hover:text-paper text-xs font-display font-bold uppercase tracking-widest">
-              {loggedIn ? "Admin" : "Admin Login"}
+              Site Management Panel
             </Link>
             <button onClick={() => setOpen(!open)} aria-label="Menu" className="lg:hidden text-paper text-2xl leading-none px-2">
               {open ? "✕" : "☰"}
@@ -52,7 +52,7 @@ export default function Header({ bannerText, loggedIn }: { bannerText?: string |
               <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-2.5 border-b border-white/5">{l.label}</Link>
             ))}
             <Link href="/enlist" onClick={() => setOpen(false)} className="py-2.5 border-b border-white/5">Enlist Now</Link>
-            <Link href={loggedIn ? "/admin" : "/login"} onClick={() => setOpen(false)} className="py-2.5">{loggedIn ? "Admin" : "Admin Login"}</Link>
+            <Link href={loggedIn ? "/admin" : "/login"} onClick={() => setOpen(false)} className="py-2.5">Site Management Panel</Link>
           </nav>
         )}
       </div>
