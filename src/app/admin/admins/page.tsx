@@ -5,7 +5,7 @@ import { removeAdmin, setAdminPermissions } from "@/lib/actions";
 import { PERMISSIONS, hasPermission } from "@/lib/permissions";
 import AddAdminForm from "@/components/AddAdminForm";
 
-export const metadata = { title: "Admin — Administrators" };
+export const metadata = { title: "Admin: Administrators" };
 
 export default async function AdminAdmins() {
   const me = await getCurrentUser();
@@ -18,8 +18,8 @@ export default async function AdminAdmins() {
       <p className="mt-2 text-sm text-neutral-600">
         Access is granted per person. The owner has every permission and can never be edited or removed.
         {canManage
-          ? " You can add administrators by email — the system generates a temporary password for you to give them — and choose exactly what each admin can access, including the right to add admins themselves."
-          : " You don't have permission to manage administrators — ask the owner if you need it."}
+          ? " You can add administrators by email. The system generates a temporary password for you to give them, and you choose exactly what each admin can access, including the right to add admins themselves."
+          : " You don't have permission to manage administrators. Ask the owner if you need it."}
       </p>
 
       <section className="admin-card mt-6">
@@ -59,7 +59,7 @@ export default async function AdminAdmins() {
               ) : (
                 <p className="mt-2 text-xs text-ash">
                   {u.permissions.length === 0
-                    ? "No permissions — can sign in only."
+                    ? "No permissions. Can sign in only."
                     : `Can access: ${PERMISSIONS.filter((p) => u.permissions.includes(p.key)).map((p) => p.label).join(", ")}`}
                 </p>
               )}
