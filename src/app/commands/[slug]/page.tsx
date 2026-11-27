@@ -40,9 +40,9 @@ export default async function CommandPage({ params }: { params: { slug: string }
           <h2 className="h-display text-2xl border-l-8 border-scarlet pl-4">Who We Are</h2>
           <p className="mt-4 text-neutral-700 leading-relaxed whitespace-pre-line">{cmd.description}</p>
 
-          <h2 className="h-display text-2xl border-l-8 border-scarlet pl-4 mt-12">Our Units</h2>
+          <h2 className="h-display text-2xl border-l-8 border-scarlet pl-4 mt-12">Our Divisions</h2>
           {cmd.units.length === 0 ? (
-            <p className="mt-4 text-neutral-600">No subordinate units are currently listed for this command.</p>
+            <p className="mt-4 text-neutral-600">No divisions are currently listed for this command.</p>
           ) : (
             <div className="mt-5 space-y-4">
               {cmd.units.map((u) => (
