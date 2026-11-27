@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { getCurrentUser } from "@/lib/auth";
 import { hasPermission } from "@/lib/permissions";
 
-export const metadata = { title: "Admin — Audit Log" };
+export const metadata = { title: "Admin: Audit Log" };
 
 export default async function AdminAudit() {
   const me = await getCurrentUser();
