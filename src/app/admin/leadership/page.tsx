@@ -4,7 +4,7 @@ import { getCurrentUser } from "@/lib/auth";
 import { hasPermission } from "@/lib/permissions";
 import { addLeadership, deleteLeadership, updateLeadership } from "@/lib/actions";
 
-export const metadata = { title: "Admin — Chain of Command" };
+export const metadata = { title: "Admin: Chain of Command" };
 
 export default async function AdminLeadership() {
   const me = await getCurrentUser();
