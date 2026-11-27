@@ -1,6 +1,5 @@
 "use server";
 
-import { randomBytes } from "crypto";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { db } from "./db";
@@ -70,7 +69,8 @@ export type CreateAdminState = { email?: string; password?: string; error?: stri
 
 const PW_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
 function generatePassword(length = 14) {
-  const bytes = randomBytes(length);
+  const bytes = new Uint8Array(length);
+  globalThis.crypto.getRandomValues(bytes);
   return Array.from(bytes, (b) => PW_ALPHABET[b % PW_ALPHABET.length]).join("");
 }
 
