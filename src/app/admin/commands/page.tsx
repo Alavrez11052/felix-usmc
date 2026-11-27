@@ -5,7 +5,7 @@ import { hasPermission } from "@/lib/permissions";
 import { db } from "@/lib/db";
 import { createCommand, deleteCommand } from "@/lib/actions";
 
-export const metadata = { title: "Admin — Commands" };
+export const metadata = { title: "Admin: Commands" };
 
 export default async function AdminCommands() {
   const me = await getCurrentUser();
@@ -19,7 +19,7 @@ export default async function AdminCommands() {
           <div key={c.id} className="admin-card flex flex-wrap items-center gap-3 !py-3">
             <div className="flex-1 min-w-[220px]">
               <span className="font-display font-bold uppercase tracking-wide">{c.name}</span>
-              <span className="text-ash text-sm"> — {c.units.length} units · {c.staff.length} staff · /commands/{c.slug}</span>
+              <span className="text-ash text-sm"> · {c.units.length} units · {c.staff.length} staff · /commands/{c.slug}</span>
             </div>
             <Link href={`/admin/commands/${c.id}`} className="btn-black !px-4 !py-2 text-xs">Edit</Link>
             <form action={deleteCommand}>
