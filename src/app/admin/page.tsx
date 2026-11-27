@@ -33,7 +33,7 @@ export default async function AdminOverview() {
           <h2 className="font-display font-bold uppercase tracking-wide">Recent Announcements</h2>
           {recentAnn.length === 0 ? <p className="mt-3 text-sm text-neutral-600">None yet.</p> : (
             <ul className="mt-3 space-y-2 text-sm">
-              {recentAnn.map((a) => <li key={a.id} className="border-b border-neutral-200 pb-2"><span className="font-semibold">{a.title}</span> <span className="text-ash">— {a.createdAt.toLocaleDateString()}</span></li>)}
+              {recentAnn.map((a) => <li key={a.id} className="border-b border-neutral-200 pb-2"><span className="font-semibold">{a.title}</span> <span className="text-ash">· {a.createdAt.toLocaleDateString()}</span></li>)}
             </ul>
           )}
           <Link href="/admin/announcements" className="btn-outline-b mt-4 !px-4 !py-2 text-xs">Manage Announcements</Link>
@@ -46,7 +46,7 @@ export default async function AdminOverview() {
                 <li key={a.id} className="border-b border-neutral-200 pb-2">
                   <span className="font-display font-bold text-xs uppercase tracking-widest">{a.action}</span>{" "}
                   <span className="text-neutral-700">{a.details}</span>{" "}
-                  <span className="text-ash">— {a.userEmail || "system"}, {a.createdAt.toLocaleString()}</span>
+                  <span className="text-ash">· {a.userEmail || "system"}, {a.createdAt.toLocaleString()}</span>
                 </li>
               ))}
             </ul>
